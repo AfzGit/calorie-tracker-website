@@ -1,0 +1,22 @@
+body {
+    background-color: #001a13;
+}
+
+#heading {
+    color: white;
+    text-align: center;
+}
+
+#list-items {
+    text-align: center;
+    color: white;
+}
+
+#about {
+    text-align: center;
+    color: magenta;
+}
+
+#result {
+    padding: 0.5% 5% 0.5% 5%;
+}
