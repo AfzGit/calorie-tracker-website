@@ -1,10 +1,7 @@
 body {
-    background-color: #001a13;
-}
-
-#heading {
+    background-color: #1e1e22;
+    min-height: 100vh;
     color: white;
-    text-align: center;
 }
 
 #list-items {
@@ -12,11 +9,64 @@ body {
     color: white;
 }
 
-#about {
-    text-align: center;
-    color: magenta;
+#adder {
+    font-weight: bold;
+    padding: 0.40em 0.5em 0.40em 0.5em ;
 }
 
-#result {
-    padding: 0.5% 5% 0.5% 5%;
+#caltrack {
+    text-align: center;
+    background-color: #356;
 }
+
+#info {
+    padding: 0.1px;
+    background-color: #467;
+}
+
+#food {
+    background-color: #467;
+}
+
+#list-items {
+    text-align: center;
+    background-color: #467;
+}
+
+#faintspacer {
+    background-color: #356;
+}
+
+input {
+  background: 0;
+  border: 0;
+  outline: none;
+  width: 20vw;
+  max-width: 400px;
+  font-size: 1.5em;
+  transition: padding 0.3s 0.2s ease;
+  background-color: white;
+
+  margin: 10px;
+  background-color: beige;
+  color: blue;
+  border-radius: 5px;
+}
+
+#item {
+    width: 100vw;
+}
+
+#calc {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#about {
+    text-align: center;
+    background-color: #467;
+    padding: 1em;
+}
+
+

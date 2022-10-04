@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <title> Calorie Tracker </title>
         <link rel="stylesheet" href="styles.css" />
     </head>
+
     <body>
+        <div id="caltrack">
+            <h2>Calorie Tracker </h2>
 
-        <h1 id="heading"> This Is A Calorie Tracker</h1>
-
-        <p id="about">Track your calories here</p>
-
-        <form id="inputs">
-            <br>
-            <div id="list-items">
-                Total calories:
-                <input id="total-cal" type="number" placeholder="Calories..."> 
-
-                - Metabolism:
-                <input id="metabolism" type="number" placeholder="Metabolism..."> 
+            <div id="info">
+                <h3>Your Metabolism</h3>
+                <input id="metabolism" type="number" placeholder="Metabolism..." required/> 
                 <br>
-                <br>
-                <input id="result" type="button" value="Result" onclick="calCheck()"/>
             </div>
-        </form>
 
+
+            <div id="food">
+                <h3>Consumables</h3>
+                <input id="item" type="text" placeholder="Item..." required/>
+                <input id="cals" type="number" placeholder="Calories..." required/>
+                <button id="adder" onclick="additem();">+</button>
+            </div>
+
+            <br>
+        </div>
+
+
+        <div id="list-items">
+            <br>
+            <h3> All consumables: </h3>
+            <ol id="thelist">
+                <! list items dynamically go here >
+            </ol>
+            <div id="faintspacer">
+                <br>
+                <button id="calc" onclick="calCheck();">Calculate Net Calories</button>
+                <br>
+                <p id="about">Calculate your net calories here</p>
+            </div>
+        </div>
+
+
+        <! script >
         <script src="script.js">
         </script>
 
