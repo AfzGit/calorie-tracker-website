@@ -41,17 +41,17 @@ function calCheck() {
 
     if (net != "error") {
         about.innerHTML =  "Total Calories: " + totalCals + " Calories<br>Metabolism: " + meta + " Calories.<br><br>Net Calories: " + net + " Calories<br><br>" + calStatus;
+        if (net < 0) {
+            about.innerHTML += "<br><br>You will lose 1 kg in " + Math.round(days) + " days if you keep this diet up.";
+        } else if (net > 0) {
+            about.innerHTML += "<br><br>You will gain 1 kg in " + Math.round(days) + " days if you keep this diet up.";
+        } else {
+            about.innerHTML += "<br><br>You will not lose weight in the coming days";
+        }
     } else {
         about.innerHTML = "Please enter all the field properly"
     }
 
-    if (net < 0) {
-        about.innerHTML += "<br><br>You will lose 1 kg in " + Math.round(days) + " days if you keep this diet up.";
-    } else if (net > 0) {
-        about.innerHTML += "<br><br>You will gain 1 kg in " + Math.round(days) + " days if you keep this diet up.";
-    } else {
-        about.innerHTML += "<br><br>You will not lose weight in the coming days";
-    }
 }
 
 // when reset button is pressed
@@ -60,7 +60,7 @@ function resetlist() {
     let completelist = document.getElementById("thelist");
 
     completelist.innerHTML = "";
-        about.innerHTML = "Calculate your net calories here";
+    about.innerHTML = "Calculate your net calories here";
 
     totalCals = 0;
 }

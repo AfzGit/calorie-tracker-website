@@ -4,6 +4,10 @@ body {
     color: white;
 }
 
+#top {
+    padding-top: 15px;
+}
+
 #list-items {
     text-align: center;
 }
