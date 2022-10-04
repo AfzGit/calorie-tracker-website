@@ -24,7 +24,7 @@ function calCheck() {
     const meta = document.getElementById('metabolism').value;
     let about = document.getElementById("about");
 
-    let net = totalCals - parseInt(meta)
+    var net = parseInt(totalCals) - parseInt(meta)
     let calStatus = "None";
 
     if (net > 0) {
@@ -37,8 +37,8 @@ function calCheck() {
         calStatus = "calorie and metabolism are balanced";
     } else {
         alert("Only numbers allowed in Metabolism and Calories fields");
-        totalCals = "error";
         net = "error";
+        console.log(net, totalCals);
     }
 
     if (net != "error") {
@@ -54,6 +54,7 @@ function calCheck() {
         about.innerHTML = "Please enter all the fields properly."
     }
 
+    net = 0;
 }
 
 // when reset button is pressed
