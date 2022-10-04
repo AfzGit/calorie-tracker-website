@@ -7,12 +7,14 @@ let days = 0;
 
 // when + button is pressed
 function additem() {
+    let about = document.getElementById("about");
     var completelist = document.getElementById("thelist");
 
     let consumables = document.getElementById("item").value;
     let itemCals = document.getElementById("cals").value;
 
     completelist.innerHTML += "<li>" + consumables +": " + itemCals + " Calories </li>";
+    about.innerHTML = "Calculate your net calories here";
 
     totalCals += parseInt(itemCals);
 }
@@ -26,7 +28,7 @@ function calCheck() {
     let calStatus = "None";
 
     if (net > 0) {
-        calStatus = "You are not calorie deficit";
+        calStatus = "You are not calorie deficit...";
         days = kgcal / net;
     } else if (net < 0) {
         calStatus = "You are calorie deficit!";
@@ -40,16 +42,16 @@ function calCheck() {
     }
 
     if (net != "error") {
-        about.innerHTML =  "Total Calories: " + totalCals + " Calories<br>Metabolism: " + meta + " Calories.<br><br>Net Calories: " + net + " Calories<br><br>" + calStatus;
+        about.innerHTML =  "Total Calories: " + totalCals + " Calories<br>Metabolism: " + meta + " Calories.<br><br>Net Calories: <ins><strong>" + net + "</strong></ins> Calories<br><br><strong>" + calStatus + "</strong>";
         if (net < 0) {
-            about.innerHTML += "<br><br>You will lose 1 kg in " + Math.round(days) + " days if you keep this diet up.";
+            about.innerHTML += "<br><br>You will lose 1 kg in <ins><strong>" + Math.round(days) + "</strong></ins> days if you keep this diet up.";
         } else if (net > 0) {
-            about.innerHTML += "<br><br>You will gain 1 kg in " + Math.round(days) + " days if you keep this diet up.";
+            about.innerHTML += "<br><br>You will gain 1 kg in <ins><strong>" + Math.round(days) + "</strong></ins> days if you keep this diet up.";
         } else {
             about.innerHTML += "<br><br>You will not lose weight in the coming days";
         }
     } else {
-        about.innerHTML = "Please enter all the field properly"
+        about.innerHTML = "Please enter all the fields properly."
     }
 
 }

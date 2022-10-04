@@ -47,16 +47,14 @@ input {
   width: 20vw;
   max-width: 400px;
   font-size: 1.5em;
-  background-color: white;
-
   margin: 10px;
-  background-color: beige;
-  color: blue;
+  background-color: #79a;
+  color: white;
   border-radius: 5px;
 }
 
 #item {
-    width: 100vw;
+    width: 80vw;
 }
 
 #calc {
@@ -71,4 +69,8 @@ input {
     padding: 1em;
 }
 
-
+#reset {
+    background-color: #922;
+    color: white;
+    font-weight: bold;
+}
