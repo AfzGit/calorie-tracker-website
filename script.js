@@ -1,5 +1,5 @@
 // one kg = 7700 cals
-const kgcal = 7000;
+const kgcal = 7700;
 // for list item 
 let totalCals = 0;
 // global variable days to calculate days
